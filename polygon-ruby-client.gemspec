@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.licenses = ['MIT']
   s.summary = 'Polygon API.'
   s.add_dependency 'faraday', '>= 1.00'
-  s.add_dependency 'faraday_middleware'
+  # s.add_dependency 'faraday_middleware'
   s.add_dependency 'oj'
   s.add_development_dependency 'rake', '~> 10'
   s.add_development_dependency 'rspec'

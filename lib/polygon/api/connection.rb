@@ -26,7 +26,8 @@ module Polygon
 
           ::Faraday::Connection.new(endpoint, options) do |connection|
             connection.use Faraday::Response::RaiseError
-            connection.use ::FaradayMiddleware::ParseOj, content_type: /\bjson$/
+            # connection.use ::FaradayMiddleware::ParseOj, content_type: /\bjson$/
+            connection.response :json
             connection.response :logger, logger if logger
             connection.adapter ::Faraday.default_adapter
           end
